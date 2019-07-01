@@ -1,0 +1,21 @@
+
+from tkinter import filedialog
+from tkinter import *
+
+
+def showDialogButton():
+	global folder_path
+	global button_pressed
+	filename = filedialog.askopenfilename(initialdir = "/", title = "Select files", filetypes = (("jpeg files","*.jpeg") , ("all files", "*.*")))
+	folder_path.set(filename)
+	button_pressed.set(1)
+
+root = Tk()
+folder_path = StringVar()
+button_pressed = BooleanVar()
+button2 = Button(text = "Browse", command = showDialogButton)
+button2.grid(row=0, column=3)
+if(button_pressed):
+	print(folder_path)
+
+root.mainloop()
