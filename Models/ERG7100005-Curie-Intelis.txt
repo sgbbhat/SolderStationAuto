@@ -9,7 +9,7 @@ SeqNo, Name,				Type,				Min Spec, 	        Max Spec, 	Unit, 		Resol, 	Audit, 	S
 7,     Battery2 Reverse,	 	Test,				0,			0,		V,		1,	1.00,	None
 8,     Battery1 Voltage,		Test,				5.7,			6.4,		V,		1,	1.00,	None
 9,     Battery2 Voltage,		Test,				5.7,			6.4,		V,		1,	1.00,	None
-10,     Info Messagebox After Bridge, 	Action,				1,			1,		V,		1,	1.00,	None
+10,    Info Messagebox After Bridge, 	Action,				1,			1,		V,		1,	1.00,	None
 11,    Vin Voltage, 			Test,				5.5,			6.5,		V,		1,	1.00,	None
 12,    Reset1 Voltage High,		Test,				2.7,			2.9,		V,		1,	1.00,	None
 13,    Reset2 Voltage High,		Test,				2.7,			2.9,		V,		1,	1.00,	None

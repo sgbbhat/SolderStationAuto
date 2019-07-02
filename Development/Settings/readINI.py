@@ -3,7 +3,7 @@ from configparser import ConfigParser
 def readINI():
 	# Instantiate 
 	config = ConfigParser()
-	configFilePath = r'/home/pi/Documents/SolderStation/Station/System.ini'
+	configFilePath = r'/home/pi/Documents/SolderStationAuto/Station/System.ini'
 	config.read(configFilePath)
 
 	# Parse Existing File
