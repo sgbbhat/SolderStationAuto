@@ -8,8 +8,9 @@ currentState = 0
 valChanged = 0
 
 def compareState (current):
+	print(current)
 	global currentState
-	if (int(current) == 0) :
+	if (int(current) == False) :
 		return 0
 	else:
 		currentState = 0
@@ -32,7 +33,7 @@ def Info_Messagebox_Before(root, key, val, databaseHandle, mfgID, Sln, TestNameT
 	top.title("Waiting for user input...")
 	top.resizable(0,0)
 
-	msg = Message(top, text = "LOAD BOARD AND LCD ON BOARD, \n \nPRESS CLAMP DOWN, \n \nTHEN PRESS FINGER SWITCH TO START.", width = 260)
+	msg = Message(top, text = "LOAD BOARD AND LCD ON BOARD, \nTHEN PRESS FINGER SWITCH TO START.", width = 260)
 	msg.place(x=10,y=10)
 
 	buttonCancel = Button(top, text = "Cancel", command = setcancelPressed)
@@ -41,16 +42,18 @@ def Info_Messagebox_Before(root, key, val, databaseHandle, mfgID, Sln, TestNameT
 	top.attributes('-topmost', 'true')	
 	root.update()
 
-	while((int(valChanged == 0))  and (cancelPressed == True)):
-		currentState = popen('megaio 0 optread 1').read()
+	while(valChanged == 0)  and (cancelPressed == True)):
+		currentState = popen('megaioind 0 ropto 1').read()
 		valChanged = compareState(currentState)
 		top.update()
-		continue
-	time.sleep(0.5)
+	time.sleep(0.2)
+	
+	# Clamp
+	
 
 	# Hold Reset low while soldering 		
-	popen('megaio 0 ocwrite 3 1')
-	popen('megaio 0 ocwrite 4 1')
+	popen('megaioind 0 woc 1 1')
+	popen('megaioind 0 woc 2 1')
 
 	currentState = 0
 	valChanged = 0

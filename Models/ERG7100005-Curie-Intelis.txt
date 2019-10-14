@@ -1,22 +1,25 @@
 [Test Table]
-SeqNo, Name,				Type,				Min Spec, 	        Max Spec, 	Unit, 		Resol, 	Audit, 	Setup
-1,     Process Enforcement,	 	Test,				1,			1,		V,		1,	0.00,	None
-2,     Info Messagebox Before, 		Action,				1,			1,		V,		1,	1.00,	None
-3,     Reset1 Voltage Low,		Test,				0,			0.5,		V,		1,	1.00,	None
-4,     Reset2 Voltage Low,		Test,				0,			0.5,		V,		1,	1.00,	None
-5,     Info Messagebox After, 		Action,				1,			1,		V,		1,	1.00,	None
-6,     Battery1 Reverse,		Test,				0,			0,		V,		1,	1.00,	None
-7,     Battery2 Reverse,	 	Test,				0,			0,		V,		1,	1.00,	None
-8,     Battery1 Voltage,		Test,				5.7,			6.4,		V,		1,	1.00,	None
-9,     Battery2 Voltage,		Test,				5.7,			6.4,		V,		1,	1.00,	None
-10,    Info Messagebox After Bridge, 	Action,				1,			1,		V,		1,	1.00,	None
-11,    Vin Voltage, 			Test,				5.5,			6.5,		V,		1,	1.00,	None
-12,    Reset1 Voltage High,		Test,				2.7,			2.9,		V,		1,	1.00,	None
-13,    Reset2 Voltage High,		Test,				2.7,			2.9,		V,		1,	1.00,	None
-14,    Test Time,			Test,				0,			999,		sec,		0,	1.00,	None
-15,    Log Test Data_SQL,		Action,				0,			0,		,		0,	1.00,	None
+Name,				Type,				Min Spec, 	        Max Spec, 	Unit, 		Resol, 	Audit, 	Setup
+Clamp Down, 			Action,				1,			1,		V,		1,	1.00,	None
+Info Messagebox Before, 	Action,				1,			1,		V,		1,	1.00,	None
+Reset1 Voltage Low,		Test,				0,			0.5,		V,		1,	1.00,	None
+Reset2 Voltage Low,		Test,				0,			0.5,		V,		1,	1.00,	None
+Info Messagebox After, 		Action,				1,			1,		V,		1,	1.00,	None
+Battery1 Reverse,		Test,				0,			0,		V,		1,	1.00,	None
+Battery2 Reverse,	 	Test,				0,			0,		V,		1,	1.00,	None
+Battery1 Voltage,		Test,				5.7,			6.4,		V,		1,	1.00,	None
+Battery2 Voltage,		Test,				5.7,			6.4,		V,		1,	1.00,	None
+Info Messagebox After Bridge, 	Action,				1,			1,		V,		1,	1.00,	None
+Vin Voltage, 			Test,				5.5,			6.2,		V,		1,	1.00,	None
+Reset1 Voltage High,		Test,				2.7,			2.9,		V,		1,	1.00,	None
+Reset2 Voltage High,		Test,				2.7,			2.9,		V,		1,	1.00,	None
+Test Time,			Test,				0,			999,		sec,		0,	1.00,	None
+Log Test Data_SQL,		Action,				0,			0,		,		0,	1.00,	None
+
 
 [Disabled Tests]
+Process Enforcement,	 	Test,				1,			1,		V,		1,	0.00,	None
+
 
 [General]
 Part_No, ERG7100005-Curie

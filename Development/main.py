@@ -20,7 +20,9 @@ def Select_Test(name):
 		"LogTestData_SQL" : Log_Test_Data_SQL,
 		"InfoMessageboxBefore" : Info_Messagebox_Before, 
 		"InfoMessageboxAfter" : Info_Messagebox_After,
-                "InfoMessageboxAfterBridge" : Info_Messagebox_After_Bridge,
+		"InfoMessageboxAfterBridge" : Info_Messagebox_After_Bridge,
+		"ClampUp" : Clamp_Up,
+		"ClampDown" : Clamp_Down,
                 "VinVoltage" : Vin_Voltage,
 		}.get(name, defaultfun)
 
@@ -38,7 +40,7 @@ root = Tk()
 # Read INI file
 StationName, ErrorLog, ModelDirectory = readINI()
 
-# Error Log
+# Create a handle for Error Log
 ErrorLogHandle = open(ErrorLog, "a")
 
 # Window settings

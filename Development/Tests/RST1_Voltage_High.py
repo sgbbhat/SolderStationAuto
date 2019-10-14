@@ -6,7 +6,7 @@ import re
 from Tests.displayResult import displayResult
 
 def RST1_Voltage_High(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput):
-	rawScale = popen('megaio 0 aread 3').read()
+	rawScale = popen('megaioind 0 ruin 4').read()
 	measurement = float(rawScale)/4095.0 * 3.3 
 	
 	result = 'Pass' if measurement > float(val[1]) and measurement < float(val[2])  else 'Fail'

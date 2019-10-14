@@ -42,3 +42,5 @@ from Tests.Info_Messagebox_After_Bridge import Info_Messagebox_After_Bridge
 from Tests.Vin_Voltage import Vin_Voltage
 from Tests.BAT1_Reverse import BAT1_Reverse
 from Tests.BAT2_Reverse import BAT2_Reverse
+from Tests.Clamp_Down import Clamp_Down
+from Tests.Clamp_Up import Clamp_Up

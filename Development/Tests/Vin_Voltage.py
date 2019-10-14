@@ -6,7 +6,7 @@ import re
 from Tests.displayResult import displayResult
 
 def Vin_Voltage(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput):
-	rawScale = popen('megaio 0 aread 8').read()
+	rawScale = popen('megaioind 0 ruin 1').read()
 	measurement = float(rawScale)/4095.0 * 3.57 * 2.0
 	result = 'Pass' if measurement > float(val[1]) and measurement < float(val[2]) else 'Fail'
 
