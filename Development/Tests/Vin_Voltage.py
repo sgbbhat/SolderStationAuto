@@ -6,8 +6,15 @@ import re
 from Tests.displayResult import displayResult
 
 def Vin_Voltage(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput):
-	rawScale = popen('megaioind 0 ruin 1').read()
-	measurement = float(rawScale)/4095.0 * 3.57 * 2.0
+	rawScale = popen('megaioind 0 ruin 3').read()
+	measurement = float(rawScale)
+
+	if measurement < float(val[1]) or measurement > float(val[2]) :
+		messagebox.showerror("Error", "Check if the bridge is Soldering - \n Solder the bridge and press OK")
+	
+	rawScale = popen('megaioind 0 ruin 3').read()
+	measurement = float(rawScale)
+
 	result = 'Pass' if measurement > float(val[1]) and measurement < float(val[2]) else 'Fail'
 
 	mod_TestName = re.sub(r"(\w)([A-Z])", r"\1 \2", key)

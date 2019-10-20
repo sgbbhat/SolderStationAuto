@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
-Name=SolderStation
+Name=SolderStationAuto
 Comment=Shortcut to run Solder Station application
-Exec=python3 /home/pi/Documents/SolderStation/Development/main.py
-Icon=/home/pi/Documents/SolderStation/Development/main.py
-Path=/home/pi/Documents/SolderStation/Development/
+Exec=python3 /home/pi/Documents/SolderStationAuto/Development/main.py
+Icon=/home/pi/Documents/SolderStationAuto/Development/main.py
+Path=/home/pi/Documents/SolderStationAuto/Development/
 Terminal=False
 Type=Application
 Categories=Utility;Application;

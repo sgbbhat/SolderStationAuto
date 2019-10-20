@@ -44,3 +44,4 @@ from Tests.BAT1_Reverse import BAT1_Reverse
 from Tests.BAT2_Reverse import BAT2_Reverse
 from Tests.Clamp_Down import Clamp_Down
 from Tests.Clamp_Up import Clamp_Up
+from Tests.play_Audio import playAudio

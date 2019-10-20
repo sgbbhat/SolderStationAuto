@@ -42,7 +42,7 @@ def Info_Messagebox_After_Bridge(root, key, val, databaseHandle, mfgID, Sln, Tes
 	root.update()
 
 	while((int(valChanged == 0)) and (cancelPressed == True)):
-		currentState = popen('megaio 0 optread 1').read()
+		currentState = popen('megaioind 0 ropto 1').read()
 		valChanged = compareState(currentState)
 		top.update()
 		continue

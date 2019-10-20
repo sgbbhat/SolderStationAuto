@@ -42,7 +42,7 @@ def Info_Messagebox_Before(root, key, val, databaseHandle, mfgID, Sln, TestNameT
 	top.attributes('-topmost', 'true')	
 	root.update()
 
-	while(valChanged == 0)  and (cancelPressed == True)):
+	while((valChanged == 0)  and (cancelPressed == True)):
 		currentState = popen('megaioind 0 ropto 1').read()
 		valChanged = compareState(currentState)
 		top.update()

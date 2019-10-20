@@ -17,11 +17,7 @@ def BAT1_Voltage(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLi
 	displayResult(TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, mod_TestName, val, measurement, result)
 	# Return test results
 	
-	Bat1Reverse = popen('megaioind 0 ropto 8').read()
-	if int(Bat1Reverse) == 1 :
-            messagebox.showerror("Error", "Battery 1 connected in Reverse")
-	
-	if result == "Fail" or int(Bat1Reverse) == 1 :
+	if result == "Fail" :
 		return False
 	else:
 		return True
