@@ -183,8 +183,9 @@ def startTest(mfgID):
 				Clamp_Up(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput)
 				MessagesLabelTitle.config(text = "Waiting for user input...")
 				messagebox.showerror("Error", "Test Failed")
-				MessagesLabelTitle.config(text = "Scan Mfg.ID barcode to begin...")
+				MessagesLabelTitle.config(text = "Waiting for user input - Scan Mfg.ID barcode to begin...")
 				break
+	MessagesLabelTitle.config(text = "Waiting for user input - Scan Mfg.ID barcode to begin...")
 
 # Binding ENTER key event
 root.bind('<Return>', startTest)

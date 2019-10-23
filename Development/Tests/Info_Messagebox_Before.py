@@ -8,7 +8,6 @@ currentState = 0
 valChanged = 0
 
 def compareState (current):
-	print(current)
 	global currentState
 	if (int(current) == False) :
 		return 0

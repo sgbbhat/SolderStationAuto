@@ -7,13 +7,13 @@ from Tests.displayResult import displayResult
 from tkinter import messagebox 
 
 def Valid_ID(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput):
-	measurement = Sln
+	measurement = int(Sln)
 	mod_TestName = re.sub(r"(\w)([A-Z])", r"\1 \2", key)
 
-	result = 'Pass' if measurement > float(val[1]) and measurement < float(val[2]) else 'Fail'
+	result = 'Pass' if measurement > int(val[1]) and measurement < int(val[2]) else 'Fail'
 
 	# Display tests and results
-	displayResult(TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, mod_TestName, val, measurement, result)
+	displayResult(TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, mod_TestName, val, int(measurement), result)
 	# Return test results
 	
 	if result == "Fail" :
