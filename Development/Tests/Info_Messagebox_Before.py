@@ -52,8 +52,8 @@ def Info_Messagebox_Before(root, key, val, databaseHandle, mfgID, Sln, TestNameT
 	
 
 	# Hold Reset low while soldering 		
-	popen('megaioind 0 woc 1 1')
-	popen('megaioind 0 woc 2 1')
+	popen('megaioind 2 woc 1 on')
+	popen('megaioind 2 woc 2 on')
 
 	currentState = 0
 	valChanged = 0

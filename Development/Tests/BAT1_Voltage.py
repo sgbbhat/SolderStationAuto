@@ -7,7 +7,7 @@ from Tests.displayResult import displayResult
 from tkinter import messagebox 
 
 def BAT1_Voltage(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput):
-	rawScale = popen('megaioind 0 ruin 2').read()
+	rawScale = popen('megaioind 0 ruin 1').read()
 	measurement = float(rawScale)
 	mod_TestName = re.sub(r"(\w)([A-Z])", r"\1 \2", key)
 

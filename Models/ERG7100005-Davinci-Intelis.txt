@@ -1,5 +1,6 @@
 [Test Table]
 Name,				Type,				Min Spec, 	Max Spec, 			Unit, 		Resol, 		Audit, 	Setup
+Process Enforcement,	 	Test,				1,			1,			V,		1,		1.00,	None
 Info Messagebox Before, 	Action,				1,			1,			V,		1,		1.00,	None
 Clamp Down,			Action,				1,			1,			V,		1,		1.00,	None
 Reset1 Voltage Low,		Test,				0,			0.5,			V,		1,		1.00,	None
