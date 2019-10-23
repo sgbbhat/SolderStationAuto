@@ -50,7 +50,7 @@ def Process_Enforcement(root, key, val, databaseHandle, mfgID, Sln, TestNameText
 
 	# Return test results
 	if result == "Fail":
-		return True
+		return False
 	else:
 		return True
 

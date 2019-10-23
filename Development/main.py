@@ -24,6 +24,7 @@ def Select_Test(name):
 		"ClampUp" : Clamp_Up,
 		"ClampDown" : Clamp_Down,
                 "VinVoltage" : Vin_Voltage,
+		"ValidID":Valid_ID,
 		}.get(name, defaultfun)
 
 modelFileContent = OrderedDict()
@@ -168,13 +169,21 @@ def startTest(mfgID):
 		if key == "" or bool(val) == False or key == 'name':
 			pass
 		else:
+			if val[0] == 'Action':
+				mod_TestName = 'Waiting for user input...'
+				pass
+			else:
+				mod_TestName = "Checking " + re.sub(r"(\w)([A-Z])", r"\1 \2", key) 
+			MessagesLabelTitle.config(text = mod_TestName)
 			testResult = Select_Test(key)(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OpMode, OpModeText, LotNumvber)
 			root.update()
 			if testResult == False:
 				playAudio()
 				Log_Test_Data_SQL(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OpMode, OpModeText, LotNumvber)
 				Clamp_Up(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput)
+				MessagesLabelTitle.config(text = "Waiting for user input...")
 				messagebox.showerror("Error", "Test Failed")
+				MessagesLabelTitle.config(text = "Scan Mfg.ID barcode to begin...")
 				break
 
 # Binding ENTER key event
