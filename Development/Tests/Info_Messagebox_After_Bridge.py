@@ -28,15 +28,15 @@ def Info_Messagebox_After_Bridge(root, key, val, databaseHandle, mfgID, Sln, Tes
 
 	cancelPressed = True	
 	top = Toplevel(master = root)
-	top.geometry("%dx%d%+d%+d" % (290, 150,800,450))
+	top.geometry("%dx%d%+d%+d" % (500, 300,700,400))
 	top.title("Waiting for user input...")
 	top.resizable(0,0)
 
-	msg = Message(top, text = "SOLDER THE BRIDGE, \n \nWHEN SOLDER IS COMPLETE, PRESS THE \nFINGER SWITCH TO CHECK THE ASSEMBLY.", width = 290)
-	msg.place(x=10,y=10)
+	msg = Message(top, text = "SOLDER THE BRIDGE, \n \nWHEN SOLDER IS COMPLETE, PRESS THE \nFINGER SWITCH TO CHECK THE ASSEMBLY.", width = 400, font=(50))
+	msg.place(x=50,y=80)
 
 	buttonCancel = Button(top, text = "Cancel", command = setcancelPressed)
-	buttonCancel.place(x=120,y=100)
+	buttonCancel.place(x=200,y=200)
 	
 	top.attributes('-topmost', 'true')	
 	root.update()

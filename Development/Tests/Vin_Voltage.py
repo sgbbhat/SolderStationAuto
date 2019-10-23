@@ -11,9 +11,8 @@ def Vin_Voltage(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLim
 
 	if measurement < float(val[1]) or measurement > float(val[2]) :
 		messagebox.showerror("Error", "Check if the bridge is Soldering - \n Solder the bridge and press OK")
-	
-	rawScale = popen('megaioind 0 ruin 3').read()
-	measurement = float(rawScale)
+		rawScale = popen('megaioind 0 ruin 3').read()
+		measurement = float(rawScale)
 
 	result = 'Pass' if measurement > float(val[1]) and measurement < float(val[2]) else 'Fail'
 

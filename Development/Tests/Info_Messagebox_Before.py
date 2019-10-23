@@ -32,8 +32,8 @@ def Info_Messagebox_Before(root, key, val, databaseHandle, mfgID, Sln, TestNameT
 	top.title("Waiting for user input...")
 	top.resizable(0,0)
 
-	msg = Message(top, text = "LOAD THE BOARD & LCD ON TO THE FIXTURE\n \nTHEN PRESS FINGER SWITCH TO START", width = 400, font=(50))
-	msg.place(x=50,y=80)
+	msg = Message(top, text = "LOAD THE BOARD & LCD ON TO THE FIXTURE\n\n\n    THEN PRESS FINGER SWITCH TO START", width = 400, font=(50))
+	msg.place(x=50,y=70)
 
 	buttonCancel = Button(top, text = "Cancel", command = setcancelPressed)
 	buttonCancel.place(x=200,y=200)
