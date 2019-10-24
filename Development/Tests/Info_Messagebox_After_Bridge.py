@@ -32,8 +32,8 @@ def Info_Messagebox_After_Bridge(root, key, val, databaseHandle, mfgID, Sln, Tes
 	top.title("Waiting for user input...")
 	top.resizable(0,0)
 
-	msg = Message(top, text = "SOLDER THE BRIDGE, \n \nWHEN SOLDER IS COMPLETE, PRESS THE \nFINGER SWITCH TO CHECK THE ASSEMBLY.", width = 400, font=(50))
-	msg.place(x=50,y=80)
+	msg = Message(top, text = "	SOLDER THE BRIDGE \n \n \n WHEN SOLDER IS COMPLETE, PRESS THE \nFINGER SWITCH TO CHECK THE ASSEMBLY", width = 400, font=(50))
+	msg.place(x=50,y=70)
 
 	buttonCancel = Button(top, text = "Cancel", command = setcancelPressed)
 	buttonCancel.place(x=200,y=200)

@@ -46,7 +46,7 @@ ErrorLogHandle = open(ErrorLog, "a")
 
 # Window settings
 root.title(StationName)
-root.geometry("1130x750")
+root.geometry("1200x780")
 root.resizable(0,0)
 root.configure(background='SlateGray4')
 
