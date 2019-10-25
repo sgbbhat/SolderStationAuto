@@ -6,7 +6,7 @@ import re
 from Tests.displayResult import displayResult
 
 def RST2_Voltage_Low(root, key, val, databaseHandle, mfgID, Sln, TestNameText, MinLimitText, MaxLimitText, MeasurementText, ResultText, modelFileContent, testStartTime, OperationMode, OperationModeInput, LotNumvberInput):
-	rawScale = popen('megaioind 2 riin 2').read()
+	rawScale = popen('megaioind 2 ruin 2').read()
 	if float(rawScale) > 10.0 :
 		measurement = 0.00
 	else :
