@@ -8,10 +8,10 @@ Reset2 Voltage Low,		Test,				0,			0.5,			V,		1,		1.00,	None
 Info Messagebox After, 		Action,				1,			1,			V,		1,		1.00,	None
 Battery1 Reverse,		Test,				0,			0,			V,		1,		1.00,	None
 Battery2 Reverse,		Test,				0,			0,			V,		1,		1.00,	None
-Battery1 Voltage,		Test,				5.8,			6.6,			V,		1,		1.00,	None
-Battery2 Voltage,		Test,				5.8,			6.6,			V,		1,		1.00,	None
+Battery1 Voltage,		Test,				6.0,			6.6,			V,		1,		1.00,	None
+Battery2 Voltage,		Test,				6.0,			6.6,			V,		1,		1.00,	None
 Info Messagebox After Bridge, 	Action,				1,			1,			V,		1,		1.00,	None
-Vin Voltage, 			Test,				5.8,			6.6,			V,		1,		1.00,	None
+Vin Voltage, 			Test,				6.0,			6.6,			V,		1,		1.00,	None
 Reset1 Voltage High,		Test,				2.6,			3.0,			V,		1,		1.00,	None
 Reset2 Voltage High,		Test,				2.6,			3.0,			V,		1,		1.00,	None
 Test Time,			Test,				0,			999,			sec,		0,		1.00,	None
